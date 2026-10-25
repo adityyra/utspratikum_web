@@ -1,0 +1,8 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "/^@'\n<\\?php\nrequire 'connect\\.php';\n\\$result = mysqli_query\\(\\$conn, 'SHOW COLUMNS FROM `' \\. DB_TABLE_NAME \\. '` LIKE \"file_path\"'\\);\necho 'HAS_FILE_PATH:' \\. \\(mysqli_num_rows\\(\\$result\\) > 0 \\? 'yes' : 'no'\\) \\. PHP_EOL;\n\\$row = mysqli_fetch_assoc\\(mysqli_query\\(\\$conn, 'SELECT NIM AS nim, NamaMahasiswa AS namamhsw, NilaiAkhir AS nilaiakhir, NilaiHuruf AS nilaihuruf, predikat, create_date, modified_date, file_path FROM ' \\. DB_TABLE_NAME \\. ' LIMIT 1'\\)\\);\necho 'FIRST_FILE:' \\. \\(\\$row\\['file_path'\\] \\?\\? 'NULL'\\) \\. PHP_EOL;\n'@ \\| php$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    }
+}
